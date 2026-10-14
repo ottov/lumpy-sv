@@ -94,7 +94,7 @@ class SV_SplitRead: public SV_Evidence
 		bool is_interchromosomal();
 
 		static void process_split(const BamAlignment &curr,
-								  const RefVector refs,
+								  const RefVector &refs,
 								  map<string, BamAlignment> &mapped_splits,
 								  UCSCBins<SV_BreakPoint*> &r_bin,
 								  int weight,
@@ -103,7 +103,7 @@ class SV_SplitRead: public SV_Evidence
 
 		static void process_intra_chrom_split(
 									const BamAlignment &curr,
-									const RefVector refs,
+									const RefVector &refs,
 									BamWriter &inter_chrom_reads,
 									map<string, BamAlignment> &mapped_splits,
 									UCSCBins<SV_BreakPoint*> &r_bin,

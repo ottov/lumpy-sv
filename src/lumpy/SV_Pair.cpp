@@ -442,7 +442,7 @@ set_distro_from_histo (int back_distance,
 void
 SV_Pair::
 process_pair(const BamAlignment &curr,
-             const RefVector refs,
+             const RefVector &refs,
              map<string, BamAlignment> &mapped_pairs,
              UCSCBins<SV_BreakPoint*> &r_bin,
              int weight,
@@ -493,7 +493,7 @@ process_pair(const BamAlignment &curr,
 void
 SV_Pair::
 process_intra_chrom_pair(const BamAlignment &curr,
-                         const RefVector refs,
+                         const RefVector &refs,
                          BamWriter &inter_chrom_reads,
                          map<string, BamAlignment> &mapped_pairs,
                          UCSCBins<SV_BreakPoint*> &r_bin,

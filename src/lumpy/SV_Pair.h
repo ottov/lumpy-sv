@@ -71,7 +71,7 @@ class SV_Pair: public SV_Evidence
 				SV_PairReader *reader);
 
 		static void process_pair(const BamAlignment &curr,
-								const RefVector refs,
+								const RefVector &refs,
 								map<string, BamAlignment> &mapped_pairs,
 								UCSCBins<SV_BreakPoint*> &r_bin,
 								int weight,
@@ -80,7 +80,7 @@ class SV_Pair: public SV_Evidence
 
 		static void process_intra_chrom_pair(
 								 const BamAlignment &curr,
-								 const RefVector refs,
+								 const RefVector &refs,
 								 BamWriter &inter_chrom_reads,
 								 map<string, BamAlignment> &mapped_pairs,
 								 UCSCBins<SV_BreakPoint*> &r_bin,

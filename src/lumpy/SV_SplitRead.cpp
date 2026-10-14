@@ -618,7 +618,7 @@ print_bedpe(int score)
 void
 SV_SplitRead::
 process_split(const BamAlignment &curr,
-              const RefVector refs,
+              const RefVector &refs,
               map<string, BamAlignment> &mapped_splits,
               UCSCBins<SV_BreakPoint*> &r_bin,
               int weight,
@@ -670,7 +670,7 @@ process_split(const BamAlignment &curr,
 void
 SV_SplitRead::
 process_intra_chrom_split(const BamAlignment &curr,
-                          const RefVector refs,
+                          const RefVector &refs,
                           BamWriter &inter_chrom_reads,
                           map<string, BamAlignment> &mapped_splits,
                           UCSCBins<SV_BreakPoint*> &r_bin,
